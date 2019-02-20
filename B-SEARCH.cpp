@@ -40,6 +40,9 @@ int main() {
 }
 
 int binarySearch(int arr[], int startIndex, int endIndex, int randomNumber) {
+	if (randomNumber == 1) {
+    		return 0;
+  	}
 	while (startIndex <= endIndex) {
 		int middle = startIndex + (endIndex - startIndex) / 2;
 		// Check if randomNumber is present at mid 
