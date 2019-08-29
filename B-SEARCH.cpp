@@ -27,14 +27,18 @@ int main() {
 
 	}
 	int randomNumber;
-	randomNumber = randomnumber = 1 + rand() % (100) + 1; // This generates the random number.
+	randomnumber = 1 + rand() % (100) + 1; // This generates the random number.
 	cout << "Random Number is: " << randomnumber << endl;
 	int arraySize;
 	arraySize = sizeof(numArray) / sizeof(numArray[0]);
 	result = binarySearch(numArray, 1, arraySize - 1, randomNumber);
-	cout << "Index is: " << result;
-	cout << "\nFound Number is: " << numArray[result] << endl;
-
+	if(result == -1){
+		cout << "Number not found" << endl;
+	}
+	else{
+		cout << "Index is: " << result;
+		cout << "\nFound Number is: " << numArray[result] << endl;
+	}
 	//system("pause");
 	return 0;
 }
